@@ -1,0 +1,44 @@
+/* === App Container === */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d1117; /* match root background */
+  color: white;
+}
+
+/* === Section Wrapper (optional for layout) === */
+.section {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* === Utility Classes === */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* === Responsive Padding Example === */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+

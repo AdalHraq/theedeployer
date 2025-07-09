@@ -1,0 +1,126 @@
+.contact-section {
+  background-color: #0b0f1a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.contact-header p {
+  color: #a0aec0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-form,
+.contact-details {
+  background-color: #111827;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.contact-form h2,
+.contact-details h2 {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.contact-form button {
+  background-color: #00bfff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.availability {
+  margin-top: 20px;
+}
+
+/* Icon-based social buttons */
+.icon-style {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon-btn {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #1f1f1f;
+  border-radius: 50%;
+  padding: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.instagram-icon {
+  background-color: #e1306c;
+}
+
+.tiktok-icon {
+  background-color: #000000;
+}
+
+.email-icon {
+  background-color: #0072c6;
+}
+

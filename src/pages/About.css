@@ -1,0 +1,146 @@
+.about-page {
+  background-color: #0d1117;
+  color: #fff;
+  padding: 4rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.about-page h1 span,
+.highlight {
+  color: #38b6ff;
+}
+
+.about-page p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.story-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  justify-content: center;
+}
+
+.story-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.story-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.story-image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+.values-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.values-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.value-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.value-card {
+  background-color: #111827;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(56, 182, 255, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+}
+
+.value-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: #38b6ff;
+  margin-bottom: 0.5rem;
+}
+
+.team-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.team-card {
+  background-color: #111827;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(56, 182, 255, 0.05);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #38b6ff;
+}
+
+.team-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.role {
+  color: #38b6ff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
