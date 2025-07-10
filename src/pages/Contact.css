@@ -124,3 +124,34 @@
   background-color: #0072c6;
 }
 
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form,
+  .contact-details {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .icon-row {
+    flex-wrap: wrap;
+  }
+
+  .icon-btn {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+}
+
