@@ -1,78 +1,16 @@
-.portfolio-section {
-  padding: 4rem 2rem;
-  text-align: center;
+.pf{background:#0d1117;padding:56px 0}
+.pf .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.pf h2{text-align:center;color:#e6f2ff;font-size:28px;margin:0 0 18px}
+.pf h2 span{color:#38b6ff}
+.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pcard{
+  background:#0f1520;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;
+  color:#cbd5e1; transition:transform .15s ease, box-shadow .15s ease;
 }
-
-.highlight {
-  color: #00bfff;
-}
-
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.portfolio-card {
-  background: #0d1117;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  max-width: 320px;
-  flex: 1 1 300px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 30px rgba(0, 191, 255, 0.05);
-}
-
-.portfolio-card:hover {
-  transform: translateY(-5px);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.portfolio-card h3 {
-  margin: 1rem 0 0.5rem;
-  color: #fff;
-}
-
-.portfolio-card p {
-  color: #b3b3b3;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.tech-tag {
-  background: #1e2531;
-  color: #00bfff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.85rem;
-}
-
-.view-project {
-  color: #00bfff;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: transform 0.2s;
-}
-
-.view-project:hover {
-  transform: translateX(3px);
-}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 60px -30px rgba(56,182,255,.35)}
+.pcard img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.pcard h3{margin:6px 0;color:#fff}
+.pcard .view{color:#38b6ff;text-decoration:none;font-weight:800}
+@media (max-width:900px){.row{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.row{grid-template-columns:1fr}}
 

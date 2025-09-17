@@ -1,23 +1,18 @@
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
-import Services from "./Services.jsx"; // pages folder
-import Portfolio from "./Portfolio.jsx"; // pages folder
-import Footer from "../components/Footer.jsx";
+import Services from "./Services.jsx";
+import Portfolio from "./Portfolio.jsx";
 
-const Home = () => {
+export default function Home() {
   return (
     <>
-      
-      <main>
-        <Hero />
-        <Services />
-        <Portfolio />
-      </main>
-      
+      {/* Do NOT wrap Hero in a padded container */}
+      <Hero />
+
+      {/* Normal content below can use .section */}
+      {/* <section className="section"><Services /></section>
+      <section className="section"><Portfolio /></section> */}
     </>
   );
-};
-
-export default Home;
+}
 

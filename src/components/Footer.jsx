@@ -1,19 +1,16 @@
 import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
+export default function Footer(){
   return (
-    <footer className="footer" id="contact">
-      <div>
-        <h3 style={{ color: "#38b6ff" }}>TheeDeployer</h3>
-        <p>© 2025 All rights reserved.</p>
-      </div>
-      <div>
-        <p>United Kingdom</p>
-        <p>theedeployer@hotmail.com</p>
+    <footer className="ft">
+      <div className="wrap">
+        <div className="brand">TheeDeployer</div>
+        <div className="meta">
+          © 2025 All rights reserved · United Kingdom · theedeployer@hotmail.com
+        </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
 

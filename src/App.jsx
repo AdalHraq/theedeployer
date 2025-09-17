@@ -11,10 +11,12 @@ import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
+
+      {/* No spacer here – body padding is handled via --nav-h */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -24,10 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
     </>
   );
 }
-
-export default App;
 

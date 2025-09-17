@@ -1,43 +1,64 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useRef, useLayoutEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+export default function Navbar() {
+  const ref = useRef(null);
+  const [open, setOpen] = useState(false);
 
-  const navItems = [
-    { text: "HOME", path: "/home" },
-    { text: "ABOUT", path: "/about" },
-    { text: "SERVICES", path: "/services" },
-    { text: "PORTFOLIO", path: "/portfolio" },
-    { text: "CONTACT", path: "/contact" },
+  // Set --nav-h to the real nav height so the hero calc is perfect
+  useLayoutEffect(() => {
+    if (!ref.current) return;
+    const h = Math.ceil(ref.current.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--nav-h", `${h}px`);
+  }, []);
+
+  const items = [
+    { to: "/home", label: "HOME" },
+    { to: "/about", label: "ABOUT" },
+    { to: "/services", label: "SERVICES" },
+    { to: "/pricing", label: "PRICING" },
+    { to: "/portfolio", label: "PORTFOLIO" },
+    { to: "/contact", label: "CONTACT" },
   ];
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
-
   return (
-    <nav>
-      <div className="container">
-        <div className="logo">THEE <span className="highlight">DEPLOYER</span></div>
+    <header ref={ref} className="pro-nav-wrap">
+      <nav className="pro-nav">
+        <Link to="/home" className="brand" aria-label="TheeDeployer">
+          <span className="brand-main">THEE</span>
+          <span className="brand-accent">DEPLOYER</span>
+        </Link>
 
-        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          {navItems.map((item, index) => (
-            <Link key={index} to={item.path} onClick={closeMenu}>
-              {item.text}
-            </Link>
+        <div className="links">
+          {items.map(({ to, label }) => (
+            <NavLink key={to} to={to} className={({isActive}) => isActive ? "link active" : "link"}>
+              {label}
+            </NavLink>
           ))}
         </div>
 
-        <div className="hamburger" onClick={toggleMenu}>
-          <span className={menuOpen ? "open" : ""}></span>
-          <span className={menuOpen ? "open" : ""}></span>
-          <span className={menuOpen ? "open" : ""}></span>
-        </div>
-      </div>
-    </nav>
-  );
-};
+        <Link to="/contact" className="nav-cta">Get Quote</Link>
 
-export default Navbar;
+        <button
+          className={`burger ${open ? "open" : ""}`}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
+
+      <div className={`drawer ${open ? "show" : ""}`}>
+        {items.map(({ to, label }) => (
+          <NavLink key={to} to={to} onClick={() => setOpen(false)} className="drawer-link">
+            {label}
+          </NavLink>
+        ))}
+        <Link to="/contact" className="drawer-cta" onClick={() => setOpen(false)}>Get Quote</Link>
+      </div>
+    </header>
+  );
+}
 

@@ -1,29 +1,34 @@
 import React from "react";
+import "../pages/Hero.css";          // purely typographic tweaks (optional)
 import { Link } from "react-router-dom";
-import "../pages/Hero.css";
 
-function Hero() {
+export default function Hero() {
+  // Inline layout guarantees (height/bleed); CSS handles the visual background too
+  const heroStyle = {
+    width: "100vw",
+    marginLeft: "calc(50% - 50vw)",
+    marginRight: "calc(50% - 50vw)",
+    minHeight: "calc(100dvh - var(--nav-h))",
+    display: "grid",
+    placeItems: "center",
+    overflow: "hidden",
+  };
+
   return (
-    <section className="hero-section">
-      <div className="hero-overlay">
-        <h1 className="hero-title">
-          INNOVATING THE <span>DIGITAL FRONTIER</span>
+    <section className="hero" style={heroStyle}>
+      <div className="inner">
+        <h1 className="title">
+          INNOVATING THE <br /> <span>DIGITAL FRONTIER</span>
         </h1>
-        <p className="hero-subtitle">
-          Transform your vision into reality with cutting-edge technology solutions
+        <p className="sub">
+          Transform your vision into reality with cutting-edge technology solutions.
         </p>
-        <div className="hero-buttons">
-          <Link to="/contact">
-            <button className="btn btn-primary">Contact Us</button>
-          </Link>
-          <Link to="/services">
-            <button className="btn btn-outline">Explore Services</button>
-          </Link>
+        <div className="actions">
+          <Link to="/contact" className="btn primary">Contact Us</Link>
+          <Link to="/services" className="btn ghost">Explore Services</Link>
         </div>
       </div>
     </section>
   );
 }
-
-export default Hero;
 
