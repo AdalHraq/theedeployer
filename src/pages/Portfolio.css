@@ -1,16 +1,91 @@
-.pf{background:#0d1117;padding:56px 0}
-.pf .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.pf h2{text-align:center;color:#e6f2ff;font-size:28px;margin:0 0 18px}
-.pf h2 span{color:#38b6ff}
-.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.pcard{
-  background:#0f1520;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;
-  color:#cbd5e1; transition:transform .15s ease, box-shadow .15s ease;
+.pf {
+  position: relative;
+  background: #0d1117;
+  padding: 56px 0;
+  color: white;
+  overflow: hidden;
 }
-.pcard:hover{transform:translateY(-4px);box-shadow:0 20px 60px -30px rgba(56,182,255,.35)}
-.pcard img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:10px}
-.pcard h3{margin:6px 0;color:#fff}
-.pcard .view{color:#38b6ff;text-decoration:none;font-weight:800}
-@media (max-width:900px){.row{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.row{grid-template-columns:1fr}}
+
+/* ✅ Particles behind */
+.pf canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.pf .wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pf h2 {
+  text-align: center;
+  color: #e6f2ff;
+  font-size: 28px;
+  margin: 0 0 18px;
+}
+
+.pf h2 span {
+  color: #38b6ff;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pcard {
+  background: #0f1520;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+  color: #cbd5e1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ✅ Hover effect on card (not hiding image) */
+.pcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -30px rgba(56, 182, 255, 0.35);
+}
+
+.pcard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: block;        /* ✅ ensure visible */
+  opacity: 1;            /* ✅ visible by default */
+  transition: transform 0.3s ease;
+}
+
+/* Subtle zoom effect instead of hiding */
+.pcard:hover img {
+  transform: scale(1.03);
+}
+
+.pcard h3 {
+  margin: 6px 0;
+  color: #fff;
+}
+
+.pcard .view {
+  color: #38b6ff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .row { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .row { grid-template-columns: 1fr; }
+}
 

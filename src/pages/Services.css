@@ -1,18 +1,98 @@
-.svc{background:#0d1117;padding:56px 0}
-.svc .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.svc h2{font-size:28px;margin:0 0 16px;text-align:center;color:#e6f2ff}
-.svc h2 span{color:#38b6ff}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.card{
-  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:14px;padding:20px;
-  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  color:#cbd5e1;
+.svc {
+  position: relative;
+  background: #0d1117;
+  padding: 56px 0;
+  overflow: hidden;
 }
-.card h3{margin:0 0 6px;color:#fff}
-.card:hover{transform:translateY(-4px); box-shadow:0 20px 60px -30px rgba(56,182,255,.35); border-color:rgba(255,255,255,.16)}
-@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.grid{grid-template-columns:1fr}}
 
+.svc canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.svc .wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.svc h2 {
+  font-size: 28px;
+  margin: 0 0 24px;
+  text-align: center;
+  color: #e6f2ff;
+}
+
+.svc h2 span {
+  color: #38b6ff;
+}
+
+/* Video Styling */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(56, 182, 255, 0.25);
+}
+
+/* Grid Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+  color: #cbd5e1;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -30px rgba(56, 182, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-container video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+}
 

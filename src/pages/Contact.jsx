@@ -1,9 +1,14 @@
 import React from "react";
 import "./Contact.css";
+import ParticleBackground from "../components/ParticleBackground"; 
+import { FaInstagram, FaTiktok, FaEnvelope } from "react-icons/fa"; // ✅ React Icons
 
 const Contact = () => {
   return (
     <section className="contact-section">
+      {/* ✅ Particles in background */}
+      <ParticleBackground />
+
       <div className="contact-header">
         <h1>Get In Touch</h1>
         <p>
@@ -13,6 +18,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-container">
+        {/* ✅ Contact Form */}
         <div className="contact-form">
           <h2>Send us a Message</h2>
           <form action="https://formspree.io/f/mjkrqdng" method="POST">
@@ -68,6 +74,7 @@ const Contact = () => {
           </form>
         </div>
 
+        {/* ✅ Contact Details */}
         <div className="contact-details">
           <h2>Contact Information</h2>
           <p>
@@ -84,6 +91,7 @@ const Contact = () => {
             </a>
           </p>
 
+          {/* ✅ Social Buttons with React Icons */}
           <div className="social-buttons icon-style">
             <p><strong>Connect with us:</strong></p>
             <div className="icon-row">
@@ -94,7 +102,7 @@ const Contact = () => {
                 className="icon-btn instagram-icon"
                 aria-label="Instagram"
               >
-                <i className="fab fa-instagram"></i>
+                <FaInstagram />
               </a>
               <a
                 href="https://www.tiktok.com/@theedeployer"
@@ -103,14 +111,14 @@ const Contact = () => {
                 className="icon-btn tiktok-icon"
                 aria-label="TikTok"
               >
-                <i className="fab fa-tiktok"></i>
+                <FaTiktok />
               </a>
               <a
                 href="mailto:theedeployer@hotmail.com"
                 className="icon-btn email-icon"
                 aria-label="Email"
               >
-                <i className="fas fa-envelope"></i>
+                <FaEnvelope />
               </a>
             </div>
           </div>

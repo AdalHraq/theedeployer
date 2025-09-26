@@ -155,3 +155,25 @@
   }
 }
 
+.contact-section {
+  position: relative;
+  background-color: #0b0f1a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* ✅ for particles */
+}
+
+/* ✅ keep particles behind */
+.contact-section canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.contact-header,
+.contact-container {
+  position: relative;
+  z-index: 1; /* ✅ keep content above particles */
+}
